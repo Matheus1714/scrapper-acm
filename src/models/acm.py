@@ -2,14 +2,18 @@ from src.models.driver import ChromeDriver
 from src.models.elements import SeleniumElement, List
 from src.drivers.DRIVER_ACM import DRIVER_DICT
 from selenium.webdriver.common.by import By
+from settings import CHROME_USER_DATA_DIR, CHROME_PROFILE_DIRECTORY
 
 import csv
 import time
 
 class ACM(ChromeDriver):
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, user_data_dir: str = None, profile_directory: str = None) -> None:
+        user_data_dir = user_data_dir or CHROME_USER_DATA_DIR
+        profile_directory = profile_directory or CHROME_PROFILE_DIRECTORY
+        
+        super().__init__(user_data_dir=user_data_dir, profile_directory=profile_directory)
 
         driver_dict = DRIVER_DICT
 
