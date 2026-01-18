@@ -1,4 +1,4 @@
-from .models.acm import ACM
+from src.models.acm import ACM
 
 def app():
     acm = ACM()

@@ -1,4 +1,4 @@
-from .crawler import BaseCrawler
+from src.models.crawler import BaseCrawler
 
 class SeleniumElement(BaseCrawler):
     def __init__(self, driver, driver_dict: dict = {}) -> None:

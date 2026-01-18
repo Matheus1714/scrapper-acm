@@ -1,6 +1,6 @@
-from .driver import ChromeDriver
-from .elements import SeleniumElement, List
-from ..drivers.DRIVER_ACM import DRIVER_DICT
+from src.models.driver import ChromeDriver
+from src.models.elements import SeleniumElement, List
+from src.drivers.DRIVER_ACM import DRIVER_DICT
 from selenium.webdriver.common.by import By
 
 import csv
